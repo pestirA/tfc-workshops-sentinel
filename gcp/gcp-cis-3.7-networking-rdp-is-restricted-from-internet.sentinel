@@ -1,3 +1,5 @@
+# This policy uses the Sentinel tfplan import to require that RDP access is restricted from the internet
+
 import "tfplan/v2" as tfplan
 
 allUnsupportedSourceRanges = [
