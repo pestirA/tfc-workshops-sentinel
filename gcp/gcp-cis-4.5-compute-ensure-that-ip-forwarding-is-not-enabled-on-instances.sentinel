@@ -1,3 +1,5 @@
+# This policy uses the Sentinel tfplan import to require that IP forwarding is not enabled on Instances
+
 import "tfplan/v2" as tfplan
 
 allComputeInstances = filter tfplan.resource_changes as _, resource_changes {
