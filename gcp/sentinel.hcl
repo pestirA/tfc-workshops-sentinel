@@ -42,7 +42,3 @@ policy "gcp-org-1.0-organization-enforce-deployment-window" {
     enforcement_level = "advisory"
 }
 
-module "tfplan-functions" {
-  source = "https://raw.githubusercontent.com/hashicorp/terraform-sentinel-policies/main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-}    
-  
