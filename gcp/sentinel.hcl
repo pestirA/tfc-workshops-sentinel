@@ -37,5 +37,12 @@ policy "gcp-cis-4.5-compute-ensure-that-ip-forwarding-is-not-enabled-on-instance
     enforcement_level = "advisory"
 }
     
-    
+#Ops 1.0 : Deployment | Enforce deployments between the hours of 1 am and 4 am
+policy "gcp-org-1.0-organization-enforce-deployment-window" {
+    enforcement_level = "advisory"
+}
+
+module "tfplan-functions" {
+  source = "https://raw.githubusercontent.com/hashicorp/terraform-sentinel-policies/main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+}    
   
