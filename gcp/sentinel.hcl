@@ -13,7 +13,7 @@ policy "gcp-cis-3.1-networking-deny-default-network-in-project" {
   enforcement_level = "advisory"
 }
     
-CIS 3.6: Networking | Ensure that SSH access is restricted from the internet
+#CIS 3.6: Networking | Ensure that SSH access is restricted from the internet
 policy "gcp-cis-3.6-networking-ssh-is-restricted-from-internet" {
   source = "https://raw.githubusercontent.com/hashicorp/terraform-foundational-policies-library/master/cis/gcp/networking/gcp-cis-3.6-networking-ssh-is-restricted-from-internet/gcp-cis-3.6-networking-ssh-is-restricted-from-internet.sentinel"
   enforcement_level = "advisory"
