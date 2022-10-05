@@ -28,7 +28,7 @@ policy "gcp-org-1.0-organization-enforce-deployment-window" {
     enforcement_level = "advisory"
 }
 #Ops 2.0 : Deployment | Enforce GCE Machine Instance Types
-policy "gcp-ops-1.0-operations-enforce-gce-machine-instance-types" {
+policy "gcp-ops-2.0-operations-enforce-gce-machine-instance-types" {
     enforcement_level = "advisory"
 }
 
