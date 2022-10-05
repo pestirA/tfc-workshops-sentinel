@@ -1,4 +1,5 @@
-#Ops 1.0 : Allow deployments between the hours of 1 am and 4 am
+# This policy uses the Sentinel tfplan import to require that all engineers adhere to orgs deployment policies
+# Allow deployments between the hours of 1 am and 4 am.
 
 import "time"
 
