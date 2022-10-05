@@ -17,6 +17,8 @@ mandatory_labels = [
 # Get all GCP compute instances
 allGCEInstances = plan.find_resources("google_compute_instance")
 
+print("FinOps 1.0: Enforce Mandatory Tags")
+
 # Filter to GCP compute instances with violations
 # Warnings will be printed for all violations since the last parameter is true
 violatingGCEInstances = plan.filter_attribute_not_contains_list(allGCEInstances,
