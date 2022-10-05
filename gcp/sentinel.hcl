@@ -27,6 +27,10 @@ policy "gcp-cis-4.5-compute-ensure-that-ip-forwarding-is-not-enabled-on-instance
 policy "gcp-org-1.0-organization-enforce-deployment-window" {
     enforcement_level = "advisory"
 }
+#Ops 2.0 : Deployment | Enforce GCE Machine Instance Types
+policy "gcp-ops-1.0-operations-enforce-gce-machine-instance-types" {
+    enforcement_level = "advisory"
+}
 
 module "tfplan-functions" {
   source = "https://raw.githubusercontent.com/hashicorp/terraform-sentinel-policies/main/common-functions/tfplan-functions/tfplan-functions.sentinel"
