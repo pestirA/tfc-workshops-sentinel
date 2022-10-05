@@ -3,10 +3,6 @@ policy "gcp-finops-1.0-operations-enforce-mandatory-labels" {
     enforcement_level = "hard-mandatory"
 }
 
-module "tfplan-functions" {
-  source = "https://raw.githubusercontent.com/hashicorp/terraform-sentinel-policies/main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-}
- 
 #CIS 3.1: Networking | Ensure the default network does not exist in a project
 policy "gcp-cis-3.1-networking-deny-default-network-in-project" {
   source = "https://raw.githubusercontent.com/hashicorp/terraform-foundational-policies-library/master/cis/gcp/networking/gcp-cis-3.1-networking-deny-default-network-in-project/gcp-cis-3.1-networking-deny-default-network-in-project.sentinel"
@@ -36,3 +32,6 @@ policy "gcp-org-1.0-organization-enforce-deployment-window" {
     enforcement_level = "advisory"
 }
 
+module "tfplan-functions" {
+  source = "https://raw.githubusercontent.com/hashicorp/terraform-sentinel-policies/main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+}
