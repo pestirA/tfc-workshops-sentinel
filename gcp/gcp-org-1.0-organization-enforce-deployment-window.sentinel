@@ -1,0 +1,13 @@
+#Ops 1.0 : Allow deployments between the hours of 1 am and 4 am
+
+import "time"
+
+timespace = time.now
+
+// Note: Time is CET by default
+is_weekday = rule { timespace.day not in ["saturday", "sunday"] }
+is_deployment_hours = rule { timespace.hour > 1 and timespace.hour < 4 }
+
+main = rule {
+    is_deployment_hours and is_weekday
+}
