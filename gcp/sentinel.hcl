@@ -25,12 +25,6 @@ policy "gcp-cis-3.7-networking-rdp-is-restricted-from-internet" {
   enforcement_level = "advisory"
 }
 
-#CIS 4.4: Ensure 'Enable connecting to serial ports' is not enabled for VM Instance   
-policy "gcp-cis-4.4-compute-enable-connecting-to-serial-ports-is-not-enabled-for-vm-instance" {
-    source = "https://raw.githubusercontent.com/hashicorp/terraform-foundational-policies-library/master/cis/gcp/compute/gcp-cis-4.4-compute-enable-connecting-to-serial-ports-is-not-enabled-for-vm-instance/gcp-cis-4.4-compute-enable-connecting-to-serial-ports-is-not-enabled-for-vm-instance.sentinel"
-    enforcement_level = "advisory"
-}
-    
 #CIS 4.5: Ensure that IP forwarding is not enabled on Instances
 policy "gcp-cis-4.5-compute-ensure-that-ip-forwarding-is-not-enabled-on-instances" {
     source = "https://raw.githubusercontent.com/hashicorp/terraform-foundational-policies-library/master/cis/gcp/compute/gcp-cis-4.5-compute-ensure-that-ip-forwarding-is-not-enabled-on-instances/gcp-cis-4.5-compute-ensure-that-ip-forwarding-is-not-enabled-on-instances.sentinel"
