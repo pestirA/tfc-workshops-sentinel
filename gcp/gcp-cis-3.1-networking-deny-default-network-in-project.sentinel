@@ -1,3 +1,5 @@
+# This policy uses the Sentinel tfplan import to require that default network does not exist in a gcp project
+
 import "tfplan/v2" as tfplan
 
 allProjectResources = filter tfplan.resource_changes as _, resource_changes {
