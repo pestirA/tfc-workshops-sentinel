@@ -1,5 +1,5 @@
 #FINOPS 1.0 : Ensure the mandatory billing labels exist in a project
-policy "gcp-finops-1.0-enforce-mandatory-labels" {
+policy "gcp-finops-1.0-operations-enforce-mandatory-labels" {
     enforcement_level = "hard-mandatory"
 }
 
