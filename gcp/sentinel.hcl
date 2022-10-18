@@ -34,7 +34,7 @@ policy "gcp-ops-2.0-operations-enforce-gce-machine-instance-types" {
 #Ops 2.0 : Deployment |Bridgecrew | 
 policy "bridgecrew" {
   source            = "./bridgecrew.sentinel"
-  enforcement_level = "hard-mandatory"
+  enforcement_level = "advisory"
 }
 
 module "tfplan-functions" {
