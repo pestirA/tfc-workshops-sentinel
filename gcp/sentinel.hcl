@@ -31,11 +31,7 @@ policy "gcp-org-1.0-organization-enforce-deployment-window" {
 policy "gcp-ops-2.0-operations-enforce-gce-machine-instance-types" {
     enforcement_level = "advisory"
 }
-#Ops 2.0 : Deployment |Bridgecrew | 
-policy "bridgecrew" {
-  source            = "./bridgecrew.sentinel"
-  enforcement_level = "advisory"
-}
+
 
 module "tfplan-functions" {
   source = "https://raw.githubusercontent.com/hashicorp/terraform-sentinel-policies/main/common-functions/tfplan-functions/tfplan-functions.sentinel"
