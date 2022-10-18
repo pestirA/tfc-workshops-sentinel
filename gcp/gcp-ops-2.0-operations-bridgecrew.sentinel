@@ -1,0 +1,38 @@
+import "http"
+import "json"
+import "tfrun"
+
+param bc_api_key
+
+body = {
+	"organization" : tfrun.organization.name,
+	"workspace" : {
+		"id" : tfrun.workspace.id,
+		"name": tfrun.workspace.name,
+		"vcs_repo": {
+		  "display_identifier": tfrun.workspace.vcs_repo.display_identifier,
+		  "branch": tfrun.workspace.vcs_repo.branch,
+		},
+  	},
+  	"run": {
+		"id": tfrun.id,
+		"created_at": tfrun.created_at,
+		"message": tfrun.message,
+		"commit_sha": tfrun.commit_sha,
+  	},
+}
+
+req = http.request("https://www.bridgecrew.cloud/api/v1/global/terraformEnterprise/webhook").with_body(json.marshal(body)).with_header("Authorization", bc_api_key)
+resp = json.unmarshal(http.post(req).body).data
+
+if (length(resp.violations) > 0) {
+  print("Violations:\n")
+  for resp.violations as violation {
+      print(violation.title)
+      print("Resource: " + violation.resource_id)
+      print("Violation ID: " + violation.violation_id)
+      print("\n")
+  }
+}
+print("More details: " + resp.details_url)  
+main = rule { length(resp.violations) < 1 }
